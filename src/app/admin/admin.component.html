@@ -7,26 +7,14 @@
       <div class="mb-3">
         <label for="id">id:</label>
         <input type="text" class="form-control" id="id" formControlName="id">
-        <div [hidden]="id.pristine || id.valid"
-             class="alert alert-danger">
-          id is required to be <b>Kids</b>, <b>Tech</b> or <b>Cook</b>
-        </div>
       </div>
       <div class="mb-3">
         <label for="employeenum">employee num:</label>
         <input type="text" class="form-control" id="employeenum" required formControlName="employeenum">
-        <div [hidden]="employeenum.pristine || employeenum.valid"
-             class="alert alert-danger">
-          employeenum is required.
-        </div>
       </div>
       <div class="mb-3">
         <label for="firstname">first name:</label>
         <input type="text" class="form-control" id="firstname" required pattern="\d+(.\d{1,2})?" formControlName="firstname">
-        <div [hidden]="firstname.pristine || firstname.valid"
-             class="alert alert-danger">
-          firstname should be a number with two optional decimals
-        </div>
       </div>
       <div class="mb-3">
         <label for="lastname">last name:</label>

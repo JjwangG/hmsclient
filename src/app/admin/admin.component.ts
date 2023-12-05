@@ -26,13 +26,13 @@ export class AdminComponent implements OnInit {
   };
 
   userForm = this.builder.group({
-    id: ['', Validators.required],
-    employeenum: ['', Validators.required],
-    password: ['', Validators.required],
-    firstname: ['', Validators.required],
-    lastname: ['', Validators.required],
-    email: ['', Validators.required],
-    role: ['', Validators.required],
+    id: [''],
+    employeenum: [''],
+    password: [''],
+    firstname: [''],
+    lastname: [''],
+    email: [''],
+    role: [''],
   });
 
   get id(): AbstractControl {

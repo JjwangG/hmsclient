@@ -1,0 +1,11 @@
+<div>
+    <h2>USER FINDER</h2>
+    <div>
+      <label for="id">User Id:</label>
+      <input type="text" #userQuery id="id">
+      <button (click)="submit(userQuery.value)">Search</button>
+    </div>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+</div>

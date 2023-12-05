@@ -1,0 +1,26 @@
+<div *ngIf="!selectedUser">
+    <h2>Sorry can't find the requested user...</h2>
+  </div>
+  <div *ngIf="selectedUser">
+    <h2>Here are details of User {{selectedUser.id}}</h2>
+    <div class="row">
+      <div class="col-3">Employee number:</div>
+      <div class="col-9">{{ selectedUser.employeenum }}</div>
+    </div>
+    <div class="row">
+      <div class="col-3">Password:</div>
+      <div class="col-9">{{ selectedUser.password }}</div>
+    </div>
+    <div class="row">
+      <div class="col-3">First Name: </div>
+      <div class="col-9">{{ selectedUser.firstname }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Last Name:</div>
+        <div class="col-9">{{ selectedUser.lastname }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Email:</div>
+        <div class="col-9">{{ selectedUser.email }}</div>
+    </div>
+  </div>

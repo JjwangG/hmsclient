@@ -3,8 +3,14 @@ import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { OneuserComponent } from './user/oneuser/oneuser.component';
 import { AdminComponent } from './admin/admin.component';
+
 import { HospitaldivComponent } from './hospitaldiv/hospitaldiv.component';
+import { AdminDivComponent } from './admin-div/admin-div.component';
+import { OnedivComponent } from './hospitaldiv/onediv/onediv.component';
+
 import { PatientComponent } from './patient/patient.component';
+import { PatientadminComponent } from './patientadmin/patientadmin.component';
+import { OnepatientComponent } from './patient/onepatient/onepatient.component';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -13,11 +19,11 @@ const userRoutes: Routes = [
  ];
 
 const patientRoutes: Routes = [
-  {path: ':id', component: OneuserComponent}
+  {path: ':id', component: OnepatientComponent}
  ];
 
 const divRoutes: Routes = [
-  {path: ':id', component: OneuserComponent}
+  {path: ':id', component: OnedivComponent}
  ];
 
 
@@ -30,15 +36,16 @@ const routes: Routes = [
   {path: 'admin', component: AdminComponent}, //create user
 
 
-  {path: 'patientform', component: PatientComponent},//create patient
-  {path: 'patients', component: UserComponent,//view patient
+  {path: 'patientform', component: PatientadminComponent},//create patient
+  {path: 'patients', component: PatientComponent,//view patient
     children: patientRoutes
   },
 
 
-  {path: 'division', component: HospitaldivComponent, //view divs
+  {path: 'divisions', component: HospitaldivComponent, //view divs
     children: divRoutes
   },
+  {path: 'divform', component: AdminDivComponent},
   {path: '**', component: HomeComponent},
 ];
 

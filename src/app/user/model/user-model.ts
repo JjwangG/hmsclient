@@ -1,10 +1,10 @@
 export class UserModel {
     constructor(
         public id: number,
-        public employeenum: number,
-        public password: string,
-        public firstname: string,
-        public lastname: string,
+        public employeeNumber: number,
+        public loginPassword: string,
+        public firstName: string,
+        public lastName: string,
         public email: string,
         public role: Role
     ) {}

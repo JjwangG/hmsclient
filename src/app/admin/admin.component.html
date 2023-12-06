@@ -5,10 +5,6 @@
     <h1>User Form</h1>
     <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
-        <label for="id">id:</label>
-        <input type="text" class="form-control" id="id" formControlName="id">
-      </div>
-      <div class="mb-3">
         <label for="employeenum">employee num:</label>
         <input type="text" class="form-control" id="employeenum" required formControlName="employeenum">
       </div>
@@ -24,6 +20,6 @@
         <label for="role">role:</label>
         <textarea cols="40" class="form-control" id="role" formControlName="role"></textarea>
       </div>
-      <button type="submit" class="btn btn-success" [disabled]="userForm.invalid">Submit</button>
+      <button type="submit" class="btn btn-success" >Submit</button>
     </form>
   </div>

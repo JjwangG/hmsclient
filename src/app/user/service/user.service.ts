@@ -17,7 +17,9 @@ export class UserService {
   ];
 
   public getUser(id: string): Observable<UserModel> {
-    return this.http.get<UserModel>(Url + 'useraccounts/{id}/' + id);
+    var x = this.http.get<UserModel>(Url + 'useraccounts/' + id);
+    console.log(x);
+    return x;
   }
 
   public addUser(book: UserModel): Observable<UserModel> {

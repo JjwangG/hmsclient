@@ -9,6 +9,11 @@ import { UserComponent } from './user/user.component';
 import { OneuserComponent } from './user/oneuser/oneuser.component';
 import { AdminComponent } from './admin/admin.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { PatientComponent } from './patient/patient.component';
+import { RouterModule } from '@angular/router';
+import { HospitaldivComponent } from './hospitaldiv/hospitaldiv.component';
+import { OnepatientComponent } from './patient/onepatient/onepatient.component';
+import { OnedivComponent } from './hospitaldiv/onediv/onediv.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +21,19 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     HomeComponent,
     UserComponent,
     OneuserComponent,
-    AdminComponent
+    AdminComponent,
+    PatientComponent,
+    HospitaldivComponent,
+    OnepatientComponent,
+    OnedivComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

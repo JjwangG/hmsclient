@@ -3,14 +3,6 @@ import {AbstractControl, FormBuilder, FormControl, Validators} from '@angular/fo
 import { Role, UserModel } from '../user/model/user-model';
 import { UserService } from '../user/service/user.service';
 
-function categoryValidator(control: FormControl<string>): { [s: string]: boolean } | null {
-  const validCategories = ['Kids', 'Tech', 'Cook'];
-  if (!validCategories.includes(control.value)) {
-    return {invalidCategory: true};
-  }
-  return null;
-}
-
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',

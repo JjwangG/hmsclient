@@ -14,6 +14,8 @@ import { RouterModule } from '@angular/router';
 import { HospitaldivComponent } from './hospitaldiv/hospitaldiv.component';
 import { OnepatientComponent } from './patient/onepatient/onepatient.component';
 import { OnedivComponent } from './hospitaldiv/onediv/onediv.component';
+import { PatientadminComponent } from './patientadmin/patientadmin.component';
+import { AdminDivComponent } from './admin-div/admin-div.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { OnedivComponent } from './hospitaldiv/onediv/onediv.component';
     PatientComponent,
     HospitaldivComponent,
     OnepatientComponent,
-    OnedivComponent
+    OnedivComponent,
+    PatientadminComponent,
+    AdminDivComponent
   ],
   imports: [
     BrowserModule,

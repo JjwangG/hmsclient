@@ -1,1 +1,58 @@
-<p>onepatient works!</p>
+<div *ngIf="!selectedUser">
+    <h2>Sorry can't find the requested patient...</h2>
+  </div>
+  <div *ngIf="selectedUser">
+    <h2>Here are details of Patient {{selectedUser.firstName}} {{selectedUser.lastName}}</h2>
+    <div class="row">
+      <div class="col-3">Insurance number:</div>
+      <div class="col-9">{{ selectedUser.insuranceNumber }}</div>
+    </div>
+    <div class="row">
+      <div class="col-3">First Name:</div>
+      <div class="col-9">{{ selectedUser.firstName }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Last Name:</div>
+        <div class="col-9">{{ selectedUser.lastName }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Address:</div>
+        <div class="col-9">{{ selectedUser.address }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Date of Birth:</div>
+        <div class="col-9">{{ selectedUser.dob }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Gender:</div>
+        <div class="col-9">{{ selectedUser.gender }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Marital Status:</div>
+        <div class="col-9">{{ selectedUser.maritalStatus }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">External Doctor:</div>
+        <div class="col-9">{{ selectedUser.externalDoctor }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Next of Kin:</div>
+        <div class="col-9">{{ selectedUser.nokFName }} {{ selectedUser.nokLName }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Next of Kin Relation:</div>
+        <div class="col-9">{{ selectedUser.nokRelation }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Next of Kin <Address></Address>:</div>
+        <div class="col-9">{{ selectedUser.nokAddress }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Next of Kin Phone Number:</div>
+        <div class="col-9">{{ selectedUser.nokPhoneNumber }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Email:</div>
+        <div class="col-9">{{ selectedUser.email }}</div>
+    </div>
+  </div>

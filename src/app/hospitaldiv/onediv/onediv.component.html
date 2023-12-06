@@ -1,1 +1,36 @@
-<p>onediv works!</p>
+<div *ngIf="!selectedUser">
+    <h2>Sorry can't find the requested division...</h2>
+  </div>
+  <div *ngIf="selectedUser">
+    <h2>Here are details of Division {{selectedUser.identifier}}</h2>
+    <div class="row">
+      <div class="col-3">Division name:</div>
+      <div class="col-9">{{ selectedUser.divName }}</div>
+    </div>
+    <div class="row">
+      <div class="col-3">location:</div>
+      <div class="col-9">{{ selectedUser.location }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Number of Beds:</div>
+        <div class="col-9">{{ selectedUser.numberOfBed }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Division Extension:</div>
+        <div class="col-9">{{ selectedUser.ext }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3">Charge Nurse:</div>
+        <div class="col-9">{{ selectedUser.nurse }}</div>
+    </div>
+    <div class="row">
+        <div class="col-3"> Nurse Bipper Extension:</div>
+        <div class="col-9">{{ selectedUser.bipper }}</div>
+    </div>
+    
+    <div class="row">
+        <div class="col-3">Current Status:</div>
+        <div class="col-9" *ngIf="!selectedUser.isComplete">Not Full</div>
+        <div class="col-9" *ngIf="selectedUser">Full</div>
+    </div>
+  </div>

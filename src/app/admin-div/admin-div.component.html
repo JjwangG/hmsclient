@@ -2,63 +2,39 @@
     <div [ngStyle]="msgStyle" [hidden]="hideMsg">
       {{message}}
     </div>
-    <h1>Patient Admission Form</h1>
+    <h1>Division Register Form</h1>
     <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
-        <label for="insuranceNumber">insurance num:</label>
-        <input type="text" class="form-control" id="insuranceNumber" required formControlName="insuranceNumber">
+        <label for="identifier">identifier:</label>
+        <input type="text" class="form-control" id="identifier" required formControlName="identifier">
       </div>
       <div class="mb-3">
-        <label for="firstname">first name:</label>
-        <input type="text" class="form-control" id="firstname" required pattern="\d+(.\d{1,2})?" formControlName="firstname">
+        <label for="divName">division name:</label>
+        <input type="text" class="form-control" id="divName" required pattern="\d+(.\d{1,2})?" formControlName="divName">
       </div>
       <div class="mb-3">
-        <label for="lastname">last name:</label>
-        <input type="text" class="form-control" id="lastname" formControlName="lastname">
+        <label for="location">location:</label>
+        <input type="text" class="form-control" id="location" formControlName="location">
       </div>
       <div class="mb-3">
-        <label for="address">address:</label>
-        <textarea cols="40" class="form-control" id="address" formControlName="address"></textarea>
+        <label for="numberOfBed">number of beds:</label>
+        <textarea cols="40" class="form-control" id="numberOfBed" formControlName="numberOfBed"></textarea>
       </div>
       <div class="mb-3">
-        <label for="dob">date of birth:</label>
-        <textarea cols="40" class="form-control" id="dob" formControlName="dob"></textarea>
+        <label for="ext">ext:</label>
+        <textarea cols="40" class="form-control" id="ext" formControlName="ext"></textarea>
       </div>
       <div class="mb-3">
-        <label for="gender">gender:</label>
-        <textarea cols="40" class="form-control" id="gender" formControlName="gender"></textarea>
+        <label for="bipper">charge nurse bipper ext.:</label>
+        <textarea cols="40" class="form-control" id="bipper" formControlName="bipper"></textarea>
       </div>
       <div class="mb-3">
-        <label for="maritalStatus">marital status:</label>
-        <textarea cols="40" class="form-control" id="maritalStatus" formControlName="maritalStatus"></textarea>
+        <label for="full">status:</label>
+        <textarea cols="40" class="form-control" id="full" formControlName="full"></textarea>
       </div>
       <div class="mb-3">
-        <label for="externalDoctor">external doctor:</label>
-        <textarea cols="40" class="form-control" id="externalDoctor" formControlName="externalDoctor"></textarea>
-      </div>
-      <div class="mb-3">
-        <label for="nokFName">Next of Kin First Name:</label>
-        <textarea cols="40" class="form-control" id="nokFName" formControlName="nokFName"></textarea>
-      </div>
-      <div class="mb-3">
-        <label for="nokLName">Next of Kin Last Name:</label>
-        <textarea cols="40" class="form-control" id="nokLName" formControlName="nokLName"></textarea>
-      </div>
-      <div class="mb-3">
-        <label for="nokRelation">Next of Kin Relation:</label>
-        <textarea cols="40" class="form-control" id="nokRelation" formControlName="nokRelation"></textarea>
-      </div>
-      <div class="mb-3">
-        <label for="nokAddress">Next of Kin Address:</label>
-        <textarea cols="40" class="form-control" id="nokAddress" formControlName="nokAddress"></textarea>
-      </div>
-      <div class="mb-3">
-        <label for="nokPhoneNumber">Next of Kin Phone Number:</label>
-        <textarea cols="40" class="form-control" id="nokPhoneNumber" formControlName="nokPhoneNumber"></textarea>
-      </div>
-      <div class="mb-3">
-        <label for="email">email:</label>
-        <textarea cols="40" class="form-control" id="email" formControlName="email"></textarea>
+        <label for="nurse">charge nurse:</label>
+        <textarea cols="40" class="form-control" id="nurse" formControlName="nurse"></textarea>
       </div>
       <button type="submit" class="btn btn-success" >Submit</button>
     </form>

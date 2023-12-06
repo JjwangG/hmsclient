@@ -7,7 +7,7 @@ export class Hdivision {
         public numberOfBed: number,
         public ext: number, 
         public bipper: number,
-        public isComplete: boolean,
+        public full: Boolean,
         public nurse: string, 
     ) {}
 }

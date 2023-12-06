@@ -25,7 +25,7 @@ export class AdminDivComponent implements OnInit{
     numberOfBed: [''],
     ext: [''],
     bipper: [''],
-    isComplete: [''],
+    full: [''],
     nurse: ['']
   });
 
@@ -57,8 +57,8 @@ export class AdminDivComponent implements OnInit{
     return <AbstractControl>this.userForm.get('bipper');
   }
 
-  get isComplete(): AbstractControl {
-    return <AbstractControl>this.userForm.get('isComplete');
+  get full(): AbstractControl {
+    return <AbstractControl>this.userForm.get('full');
   }  
 
   get nurse(): AbstractControl {
@@ -92,7 +92,8 @@ export class AdminDivComponent implements OnInit{
       Number(this.userForm.value.numberOfBed), 
       Number(this.userForm.value.ext),
       Number(this.userForm.value.bipper),  
-      Boolean(this.userForm.value.isComplete),
+      //<string>this.userForm.value.full,
+      Boolean(this.userForm.value.full),
       <string>this.userForm.value.nurse
       );
     this.userService.addUser(book).subscribe({

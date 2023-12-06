@@ -27,10 +27,10 @@
         <div class="col-3"> Nurse Bipper Extension:</div>
         <div class="col-9">{{ selectedUser.bipper }}</div>
     </div>
-    
+
     <div class="row">
-        <div class="col-3">Current Status:</div>
-        <div class="col-9" *ngIf="!selectedUser.isComplete">Not Full</div>
-        <div class="col-9" *ngIf="selectedUser">Full</div>
-    </div>
+      <div class="col-9" *ngIf="selectedUser.full"> Division is full</div>
+      <div class="col-9" *ngIf="!selectedUser.full"> Division is not full</div>
+  </div>
+
   </div>

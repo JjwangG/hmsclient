@@ -1,0 +1,19 @@
+<div>
+    <p>ADMIT PATIENT</p>
+    <div>
+        <form>
+            <div class="mb-3">
+                <label for="lastname">Patient ID:</label>
+                <input type="text" class="form-control" id="lastname" formControlName="lastname">
+              </div>
+              <div class="mb-3">
+                <label for="role">Division ID:</label>
+                <textarea cols="40" class="form-control" id="role" formControlName="role"></textarea>
+              </div>
+              <button (click)="openPopup()" class="btn btn-success" >Admit</button>
+              <div *ngIf="openPopupVar" class=window__container>
+                <h1>Patient Admitted</h1>
+              </div>
+        </form>
+    </div>
+</div>

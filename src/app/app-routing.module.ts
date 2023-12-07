@@ -5,6 +5,7 @@ import { OneuserComponent } from './user/oneuser/oneuser.component';
 import { AdminComponent } from './admin/admin.component';
 import { DivisionComponent } from './division/division.component';
 import { PatientComponent } from './patient/patient.component';
+import { AdmitComponent } from './admit/admit.component';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -14,6 +15,7 @@ const childRoutes: Routes = [
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
+  {path: 'admit', component: AdmitComponent},
   {path:"", redirectTo:'home',pathMatch: 'full'},
   {path: 'useraccounts', component: UserComponent, //view user
     children: childRoutes
